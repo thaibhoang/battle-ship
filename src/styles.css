@@ -1,0 +1,66 @@
+* {
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+}
+
+.player, .computer{
+    display: grid;
+    align-content: center;
+}
+.board {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 0.25rem;
+}
+
+.cel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    background: linear-gradient(45deg, skyblue, rgb(114, 152, 224));
+    border-radius: 0.25rem;
+}
+.cel.shipCell {
+    background: linear-gradient(45deg, rgb(91, 80, 240), rgb(162, 38, 233));
+}
+.container {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.25rem;
+}
+.ships{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pointer-events-none {
+    pointer-events: none;	
+}
+
+.pointer-events-auto {
+    pointer-events: auto;	
+}
+
+.container.added .cel{
+    pointer-events: none;
+    background: linear-gradient(45deg, rgb(224, 223, 154), rgb(235, 167, 167));;
+}
+.container.added {
+    pointer-events: none;
+}
