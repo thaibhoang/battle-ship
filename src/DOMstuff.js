@@ -119,7 +119,8 @@ function DOM() {
                     if (newPlayer.board.placeShip(Number(x), Number(y), direction, length, n)) {  
                         const oneship = makeShip(length);
                         newPlayer.board.addShipFleet(oneship);
-                        currentContainer.classList.add('added');    
+                        currentContainer.classList.add('added');  
+                        currentContainer.remove();
                         shipCreated += 1;                          
                         length = 11;
                         if (shipCreated === 5) {startGameButton.removeAttribute('disabled')};
